@@ -1,6 +1,6 @@
 ! Maps CapsLock + hjkl as arrows
 ! Replace keycode on line 3 with correct key for your system
-keycode 66 = Mode_switch
+keycode 37 = Mode_switch
 keysym h = h H Left
 keysym l = l L Right
 keysym k = k K Up
