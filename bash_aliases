@@ -1,5 +1,6 @@
 
 
+PS1='[\u@\h \W] \D{%F} \@ \n\$ '
 
 alias android="nmcli dev wifi connect AndroidAP"
 
