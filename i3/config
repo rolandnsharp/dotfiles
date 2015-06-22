@@ -9,6 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# set Mod to Alt
 set $mod Mod1
 
 # Removes window title bars
@@ -95,15 +96,15 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container TODO: map this key.
-# bindsym $mod+a focus parent
+bindsym $mod+g focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+a workspace 1
-bindsym $mod+s workspace 2 
-bindsym $mod+d workspace 3 
+bindsym $mod+s workspace 2
+bindsym $mod+d workspace 3
 bindsym $mod+f workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -113,8 +114,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+a move container to workspace 1 
-bindsym $mod+Shift+s move container to workspace 2 
+bindsym $mod+Shift+a move container to workspace 1
+bindsym $mod+Shift+s move container to workspace 2
 bindsym $mod+Shift+d move container to workspace 3
 bindsym $mod+Shift+f move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
@@ -139,12 +140,11 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -163,6 +163,6 @@ bar {
         status_command i3status
         position top
         mode hide
-        modifier Mod1
+        #modifier Mod1
         font pango:monospace 8
 }
