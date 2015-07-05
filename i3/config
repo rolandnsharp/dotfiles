@@ -11,9 +11,10 @@
 
 # set Mod to Alt
 set $mod Mod1
+set $super Mod4
 
 # Removes window title bars
-# new_window 1pixel
+new_window 1pixel
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -21,7 +22,7 @@ set $mod Mod1
 # font pango:monospace 8
 # Sets title bar test to 0 height, better that removeing borders as you still
 # get some indication of active window.
- font pango:DejaVu Sans Mono 0
+ font pango:DejaVu Sans Mono 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -155,14 +156,21 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"bindsym --release $super+x exec --no-startup-id xdotool key --clearmodifiers Escape
+
+# Simple VI Mode
+bindsym --release $super+d exec --no-startup-id xdotool key --clearmodifiers Escape
+bindsym --release $super+h exec --no-startup-id xdotool key --clearmodifiers Left Arrow
+bindsym --release $super+j exec --no-startup-id xdotool key --clearmodifiers Down Arrow
+bindsym --release $super+k exec --no-startup-id xdotool key --clearmodifiers Up Arrow
+bindsym --release $super+l exec --no-startup-id xdotool key --clearmodifiers Right Arrow
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
         position top
-        mode hide
-        #modifier Mod1
-        font pango:monospace 8
+      #  mode hide
+        modifier Mod1
+        #font pango:monospace 8
 }
