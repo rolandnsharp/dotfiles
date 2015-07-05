@@ -156,7 +156,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"bindsym --release $super+x exec --no-startup-id xdotool key --clearmodifiers Escape
+bindsym $mod+r mode "resize"
 
 # Simple VI Mode
 bindsym --release $super+d exec --no-startup-id xdotool key --clearmodifiers Escape
