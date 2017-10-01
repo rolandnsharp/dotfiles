@@ -12,3 +12,6 @@ keysym j = j J Down
 !keysym l = l L Right
 !keysym k = k K Up
 !keysym j = j J Down
+
+# make short-pressed Ctrl behave like Escape:
+xcape -e 'Control_L=Escape'
